@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerFit · 경력 매칭</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f11; color: #e8e8f0; font-family: -apple-system, sans-serif; font-size: 14px; }
+  textarea, input { font-family: -apple-system, sans-serif; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #1f1f24; }
+  ::-webkit-scrollbar-thumb { background: #2a2a30; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState } = React;
+
+const C = {
+  bg: "#0f0f11", surface: "#17171a", surface2: "#1f1f24",
+  border: "#2a2a30", accent: "#4f8cff", green: "#34d399",
+  yellow: "#fbbf24", red: "#f87171", sub: "#8888a0", dim: "#55556a"
+};
+
+function App() {
+  const [apiKey, setApiKey] = useState(localStorage.getItem("cf_key") || "");
+  const [resumeText, setResumeText] = useState(localStorage.getItem("cf_resume") || "");
+  const [jdText, setJdText] = useState("");
+  const [phase, setPhase] = useState("input");
+  const [result, setResult] = useState(null);
+  const [revised, setRevised] = useState("");
+  const [error, setError] = useState("");
+  const [loadingMsg, setLoadingMsg] = useState("");
+
+  const canAnalyze = apiKey.trim().length > 10 && resumeText.trim().length > 20 && jdText.trim().length > 20;
+
+  function saveKey(v) {
+    setApiKey(v);
+    if (v.length > 10) localStorage.setItem("cf_key", v);
+  }
+
+  function saveResume(v) {
+    setResumeText(v);
+    localStorage.setItem("cf_resume", v);
+  }
+
+  async function callClaude(prompt, maxTokens) {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey.trim(),
+        "anthropic-version": "2023-06-01",
+        "anthropic-dangerous-direct-browser-access": "true",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        max_tokens: maxTokens,
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+    const text = await res.text();
+    let data;
+    try { data = JSON.parse(text); }
+    catch(e) { throw new Error("서버 응답 오류: " + text.slice(0, 150)); }
+    if (data.error) throw new Error(data.error.message || JSON.stringify(data.error));
+    if (!data.content?.[0]?.text) throw new Error("응답 없음: " + text.slice(0, 150));
+    return data.content[0].text;
+  }
+
+  async function analyze() {
+    setError(""); setResult(null);
+    setPhase("loading"); setLoadingMsg("매칭 분석 중...");
+    try {
+      const reply = await callClaude(
+`경력기술서와 채용공고를 비교 분석하세요. JSON만 반환하세요. 다른 텍스트 없이.
+
+경력기술서:
+${resumeText.slice(0, 3000)}
+
+채용공고:
+${jdText.slice(0, 3000)}
+
+JSON 형식:
+{"score":75,"match_keywords":["키워드1","키워드2","키워드3"],"gap_keywords":["부족1","부족2"],"analysis":"종합 분석 3문장","decision_advice":"지원 여부 조언 1문장"}`, 800);
+
+      const m = reply.match(/\{[\s\S]*\}/);
+      if (!m) throw new Error("JSON 파싱 실패: " + reply.slice(0, 150));
+      setResult(JSON.parse(m[0]));
+      setPhase("result");
+    } catch(e) {
+      setError(e.message);
+      setPhase("input");
+    }
+  }
+
+  async function generateResume() {
+    setError("");
+    setPhase("revising"); setLoadingMsg("경력기술서 최적화 중...");
+    try {
+      const reply = await callClaude(
+`아래 경력기술서를 채용공고에 맞게 최적화하세요. 실제 경험 범위를 벗어나지 않고 표현만 강화하세요.
+
+원본 경력기술서:
+${resumeText.slice(0, 3000)}
+
+채용공고:
+${jdText.slice(0, 3000)}
+
+최적화된 경력기술서를 바로 작성하세요:`, 2000);
+      setRevised(reply);
+      setPhase("revised");
+    } catch(e) {
+      setError(e.message);
+      setPhase("result");
+    }
+  }
+
+  function reset() {
+    setJdText(""); setResult(null); setRevised("");
+    setError(""); setPhase("input");
+  }
+
+  const scoreColor = result
+    ? result.score >= 75 ? C.green : result.score >= 50 ? C.yellow : C.red
+    : C.accent;
+
+  const card = { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 18 };
+  const lbl = { fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px", color: C.dim, display: "block", marginBottom: 8 };
+  const ta = { width: "100%", background: C.surface2, border: `1px solid ${C.border}`, borderRadius: 8, color: "#e8e8f0", fontSize: 13, padding: "10px 12px", resize: "vertical", outline: "none", lineHeight: 1.7 };
+
+  return (
+    <div style={{ minHeight: "100vh", paddingBottom: 60 }}>
+
+      {/* Header */}
+      <div style={{ padding: "16px 20px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center" }}>
+        <span style={{ fontSize: 17, fontWeight: 700, color: C.accent }}>CareerFit</span>
+        <span style={{ color: C.sub, marginLeft: 8, fontSize: 13 }}>경력 매칭 분석</span>
+        {apiKey.length > 10 && <span style={{ marginLeft: "auto", width: 8, height: 8, borderRadius: "50%", background: C.green, display: "inline-block", boxShadow: `0 0 6px ${C.green}` }} />}
+      </div>
+
+      <div style={{ maxWidth: 680, margin: "0 auto", padding: "20px 16px", display: "flex", flexDirection: "column", gap: 14 }}>
+
+        {/* API Key */}
+        <div style={card}>
+          <span style={lbl}>API 키 (Anthropic Console)</span>
+          <input type="password" placeholder="sk-ant-api03-..."
+            value={apiKey} onChange={e => saveKey(e.target.value)}
+            style={{ ...ta, resize: "none", minHeight: "auto" }} />
+          <div style={{ fontSize: 11, color: C.dim, marginTop: 6 }}>
+            입력한 키는 이 기기에만 저장됩니다
+          </div>
+        </div>
+
+        {/* Resume — 저장됨 */}
+        <div style={card}>
+          <span style={lbl}>Step 1 · 경력기술서 <span style={{ color: C.green, fontWeight: 400 }}>(저장됨)</span></span>
+          <textarea rows={6} placeholder="경력기술서 전체를 붙여넣으세요. 한 번 입력하면 저장됩니다."
+            value={resumeText} onChange={e => saveResume(e.target.value)} style={ta} />
+        </div>
+
+        {/* JD */}
+        <div style={card}>
+          <span style={lbl}>Step 2 · 채용공고 (JD)</span>
+          <textarea rows={6} placeholder="사람인 · 링크드인 · 원티드 등 채용공고 전문을 붙여넣으세요."
+            value={jdText} onChange={e => setJdText(e.target.value)} style={ta} />
+        </div>
+
+        {/* Error */}
+        {error && (
+          <div style={{ background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.3)", borderRadius: 10, padding: "12px 14px", fontSize: 12, color: C.red, lineHeight: 1.7, wordBreak: "break-all" }}>
+            ⚠️ {error}
+          </div>
+        )}
+
+        {/* Analyze btn */}
+        {(phase === "input" || phase === "loading") && (
+          <button onClick={analyze} disabled={!canAnalyze || phase === "loading"}
+            style={{ width: "100%", padding: 14, borderRadius: 8, border: "none", fontSize: 15, fontWeight: 600, cursor: canAnalyze && phase !== "loading" ? "pointer" : "not-allowed", background: canAnalyze && phase !== "loading" ? C.accent : C.border, color: canAnalyze && phase !== "loading" ? "#fff" : C.dim, transition: "background 0.2s" }}>
+            {phase === "loading" ? "⏳ " + loadingMsg : "매칭 분석 시작"}
+          </button>
+        )}
+
+        {/* Result card */}
+        {result && phase !== "input" && (
+          <div style={card}>
+            <span style={lbl}>Step 3 · 매칭 결과</span>
+
+            <div style={{ textAlign: "center", padding: "18px 0 12px" }}>
+              <div style={{ fontSize: 64, fontWeight: 700, color: scoreColor, lineHeight: 1 }}>{result.score}</div>
+              <div style={{ fontSize: 12, color: C.sub, marginTop: 4 }}>/ 100</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: scoreColor, marginTop: 6 }}>
+                {result.score >= 75 ? "높은 매칭" : result.score >= 55 ? "좋은 매칭" : result.score >= 35 ? "보통 매칭" : "낮은 매칭"}
+              </div>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}>
+              <div style={{ background: C.surface2, borderRadius: 8, padding: 12 }}>
+                <div style={{ fontSize: 11, color: C.dim, marginBottom: 8 }}>✅ 강점 키워드</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                  {(result.match_keywords || []).map(k => (
+                    <span key={k} style={{ background: "rgba(52,211,153,0.12)", color: C.green, border: "1px solid rgba(52,211,153,0.25)", padding: "3px 8px", borderRadius: 20, fontSize: 11 }}>{k}</span>
+                  ))}
+                </div>
+              </div>
+              <div style={{ background: C.surface2, borderRadius: 8, padding: 12 }}>
+                <div style={{ fontSize: 11, color: C.dim, marginBottom: 8 }}>⚠️ 보완 필요</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                  {(result.gap_keywords || []).map(k => (
+                    <span key={k} style={{ background: "rgba(248,113,113,0.1)", color: C.red, border: "1px solid rgba(248,113,113,0.25)", padding: "3px 8px", borderRadius: 20, fontSize: 11 }}>{k}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ fontSize: 13, color: C.sub, lineHeight: 1.8 }}>{result.analysis}</div>
+          </div>
+        )}
+
+        {/* Decision */}
+        {phase === "result" && (
+          <div style={card}>
+            <span style={lbl}>Step 4 · 지원 결정</span>
+            <div style={{ fontSize: 13, color: C.sub, lineHeight: 1.7, marginBottom: 14 }}>{result?.decision_advice}</div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button onClick={generateResume}
+                style={{ flex: 1, padding: 12, background: "rgba(52,211,153,0.12)", color: C.green, border: "1px solid rgba(52,211,153,0.3)", borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
+                ✍️ 맞춤 경력기술서 생성
+              </button>
+              <button onClick={() => setPhase("skipped")}
+                style={{ padding: "12px 16px", background: C.surface2, color: C.sub, border: `1px solid ${C.border}`, borderRadius: 8, fontSize: 14, cursor: "pointer" }}>
+                패스
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Revising */}
+        {phase === "revising" && (
+          <div style={{ ...card, color: C.sub, fontSize: 13 }}>⏳ {loadingMsg}</div>
+        )}
+
+        {/* Revised */}
+        {phase === "revised" && (
+          <div style={card}>
+            <span style={lbl}>Step 5 · 맞춤 경력기술서</span>
+            <div style={{ background: C.surface2, border: `1px solid ${C.border}`, borderRadius: 8, padding: 14, fontSize: 13, lineHeight: 1.8, whiteSpace: "pre-wrap", maxHeight: 420, overflowY: "auto", marginBottom: 10 }}>
+              {revised}
+            </div>
+            <button onClick={() => { navigator.clipboard.writeText(revised); alert("복사됐습니다!"); }}
+              style={{ width: "100%", padding: 11, background: "none", color: C.accent, border: `1px solid ${C.border}`, borderRadius: 8, fontSize: 13, cursor: "pointer" }}>
+              📋 전체 복사
+            </button>
+          </div>
+        )}
+
+        {/* Skipped */}
+        {phase === "skipped" && (
+          <div style={{ ...card, textAlign: "center", padding: 28 }}>
+            <div style={{ fontSize: 28, marginBottom: 8 }}>👍</div>
+            <div style={{ color: C.sub }}>이 공고는 패스했습니다</div>
+          </div>
+        )}
+
+        {/* Reset */}
+        {(phase === "revised" || phase === "skipped") && (
+          <button onClick={reset}
+            style={{ width: "100%", padding: 12, background: C.surface2, color: C.sub, border: `1px solid ${C.border}`, borderRadius: 8, fontSize: 14, cursor: "pointer" }}>
+            🔄 새 공고 분석하기
+          </button>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
