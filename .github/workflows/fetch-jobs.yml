@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: "20"
 
-            - name: Run fetch & score script
+      - name: Run fetch & score script
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
