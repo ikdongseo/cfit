@@ -33,4 +33,5 @@ jobs:
           git pull --rebase origin main
           git add data/jobs.json
           git diff --cached --quiet && echo "변경 사항 없음" || git commit -m "chore: update job postings ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push origin main
+          git push --force-with-lease origin main
+
