@@ -23,8 +23,8 @@ jobs:
           node-version: "20"
 
       - name: Run fetch & score script
-        env:
-          WORKNET_API_KEY: ${{ secrets.WORKNET_API_KEY }}
+       env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-and-score.js
 
