@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,8 +32,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
+          git fetch origin main
+          git rebase origin/main
           git add data/jobs.json
-          git diff --cached --quiet && echo "변경 사항 없음" || git commit -m "chore: update job postings ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push --force-with-lease origin main
-
+          git diff --cached --quiet && echo "변경 없음" || git commit -m "chore: update job postings ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push origin main
