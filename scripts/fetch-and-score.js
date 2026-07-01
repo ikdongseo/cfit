@@ -29,8 +29,8 @@ function extractAllXml(xml, tag) {
 }
 
 async function fetchWorknetJobs(keyword) {
-  const url = new URL("https://apis.data.go.kr/B552474/JobPostingInfoService/getJobPostings");
-  url.searchParams.set("serviceKey", WORKNET_KEY);
+  const url = new URL("https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L01.do");
+  url.searchParams.set("authKey", WORKNET_KEY);
   url.searchParams.set("callTp", "L");
   url.searchParams.set("returnType", "XML");
   url.searchParams.set("startPage", "1");
