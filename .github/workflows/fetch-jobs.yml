@@ -2,7 +2,7 @@ name: Fetch & Score Job Postings
 
 on:
   schedule:
-    - cron: "30 22,3,9,13 * * *"
+    - cron: "30 23 */2 * *"
   workflow_dispatch: {}
 
 permissions:
