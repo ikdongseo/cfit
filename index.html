@@ -46,39 +46,15 @@ const COMPANIES = [
   { name: "LG전자", url: "https://careers.lg.com", color: "#A50034" },
   { name: "현대자동차", url: "https://talent.hyundai.com", color: "#002C5F" },
   { name: "기아", url: "https://recruithr.kia.com", color: "#05141F" },
-  { name: "사람인", url: "https://www.saramin.co.kr", color: "#FF6B35" },
-  { name: "원티드", url: "https://www.wanted.co.kr", color: "#36f" },
-  { name: "잡코리아", url: "https://www.jobkorea.co.kr", color: "#FF3D00" },
-  { name: "리멤버", url: "https://career.rememberapp.co.kr", color: "#4A90E2" },
-  { name: "링크드인", url: "https://www.linkedin.com/jobs", color: "#0A66C2" },
 ];
 
 function CompanyLinks() {
-  const platforms = COMPANIES.filter(c => ["사람인","원티드","잡코리아","리멤버","링크드인"].includes(c.name));
-  const companies = COMPANIES.filter(c => !["사람인","원티드","잡코리아","리멤버","링크드인"].includes(c.name));
-
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
       <div style={card}>
-        <span style={lbl}>채용 플랫폼</span>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {platforms.map(c => (
-            <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 14px", background: C.surface2, border: `1px solid ${C.border}`, borderRadius: 10, textDecoration: "none", color: "#e8e8f0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <div style={{ width: 8, height: 8, borderRadius: "50%", background: c.color }} />
-                <span style={{ fontSize: 14, fontWeight: 600 }}>{c.name}</span>
-              </div>
-              <span style={{ fontSize: 11, color: C.dim }}>바로가기 →</span>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div style={card}>
         <span style={lbl}>타겟 기업 채용페이지</span>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {companies.map(c => (
+          {COMPANIES.map(c => (
             <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 14px", background: C.surface2, border: `1px solid ${C.border}`, borderRadius: 10, textDecoration: "none", color: "#e8e8f0" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
