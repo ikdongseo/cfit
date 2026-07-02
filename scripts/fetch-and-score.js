@@ -17,17 +17,17 @@ function loadJSON(p, fb) { try { return JSON.parse(fs.readFileSync(p,"utf-8")); 
 function loadResume() { try { return fs.readFileSync(RESUME_PATH,"utf-8").trim(); } catch(e) { console.error("이력서 없음"); process.exit(1); } }
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// SerpAPI로 구글 검색 → 채용공고 수집
-async function fetchJobsByQuery(query) {
+// 구글 Jobs 검색
+async function fetchGoogleJobs(query) {
   const url = new URL("https://serpapi.com/search.json");
   url.searchParams.set("api_key", SERPAPI_KEY);
-  url.searchParams.set("engine", "google");
+  url.searchParams.set("engine", "google_jobs");
   url.searchParams.set("q", query);
   url.searchParams.set("hl", "ko");
   url.searchParams.set("gl", "kr");
-  url.searchParams.set("num", "10");
+  url.searchParams.set("location", "South Korea");
 
-  console.log("검색:", query);
+  console.log("Jobs 검색:", query);
   const res = await fetch(url.toString());
   const data = await res.json();
 
@@ -36,26 +36,33 @@ async function fetchJobsByQuery(query) {
     return [];
   }
 
-  const results = data.organic_results || [];
+  const results = data.jobs_results || [];
   console.log("결과:", results.length + "건");
   return results;
 }
 
-function parseSearchResult(item, query) {
+function parseGoogleJob(item, query) {
+  // 경력 조건 추출
+  const highlights = item.job_highlights || [];
+  const qualifications = highlights.find(h => h.title === "Qualifications") || {};
+  const experience = (qualifications.items || []).find(i => /경력|년|year/i.test(i)) || "";
+
   return {
-    id: Buffer.from(item.link || item.title || "").toString("base64").slice(0, 40),
-    source: "serpapi",
+    id: Buffer.from((item.job_id || item.title + item.company_name || "")).toString("base64").slice(0, 40),
+    source: "google_jobs",
     matchedKeyword: query,
     title: item.title || "",
-    company: item.displayed_link || "",
-    url: item.link || "",
-    location: "",
-    jobType: "",
+    company: item.company_name || "",
+    url: (item.related_links?.[0]?.link) || "",
+    location: item.location || "",
+    jobType: (item.detected_extensions?.schedule_type) || "",
     industry: "",
-    experience: "",
+    experience: experience,
     education: "",
-    salary: "",
-    snippet: item.snippet || "",
+    salary: (item.detected_extensions?.salary) || "",
+    snippet: item.description?.slice(0, 300) || "",
+    postingDate: item.detected_extensions?.posted_at || "",
+    expirationDate: "",
     fetchedAt: new Date().toISOString(),
   };
 }
@@ -63,9 +70,12 @@ function parseSearchResult(item, query) {
 async function scoreJobWithClaude(job, resumeText) {
   const jdSummary = [
     "공고 제목: " + job.title,
-    "출처: " + job.company,
-    "내용 요약: " + job.snippet,
-    "검색 키워드: " + job.matchedKeyword,
+    "회사: " + job.company,
+    "근무지: " + job.location,
+    "고용형태: " + job.jobType,
+    "경력 조건: " + job.experience,
+    "급여: " + job.salary,
+    "공고 내용: " + job.snippet,
   ].join("\n");
 
   const prompt = `경력기술서와 채용공고를 비교 분석하세요. JSON만 반환하세요. 다른 텍스트 없이.
@@ -104,12 +114,11 @@ async function main() {
   const existingJobs = loadJSON(JOBS_PATH, []);
   const existingIds = new Set(existingJobs.map(j => j.id));
 
-  // 무료 플랜 월 100회 한도 내 운영
-  // 하루 1회 실행 × 쿼리 3개 = 월 90회
+  // 구글 Jobs 쿼리 3개 (월 90회, 무료 한도 내)
   const queries = [
-    "site:saramin.co.kr SCM 공급망 전략기획 채용",
-    "site:saramin.co.kr S&OP 수요예측 경영전략 채용",
-    "site:wanted.co.kr SCM 전략기획 사업전략 채용",
+    "SCM 공급망 전략기획 채용 서울",
+    "S&OP 수요예측 경영전략 채용 경력",
+    "사업전략 DX 오퍼레이션 채용 대기업",
   ];
 
   console.log("기존 저장된 공고: " + existingJobs.length + "건");
@@ -119,9 +128,9 @@ async function main() {
 
   for (const query of queries) {
     try {
-      const results = await fetchJobsByQuery(query);
+      const results = await fetchGoogleJobs(query);
       for (const item of results) {
-        const job = parseSearchResult(item, query);
+        const job = parseGoogleJob(item, query);
         if (!job.id || seen.has(job.id)) continue;
         seen.add(job.id);
         collected.push(job);
@@ -146,7 +155,7 @@ async function main() {
         gapKeywords: r.gap_keywords || [],
         analysis: r.analysis || "",
       });
-      console.log("  [" + r.score + "점] " + job.title);
+      console.log("  [" + r.score + "점] " + job.title + " (" + job.company + ")");
     } catch(e) {
       console.error("  매칭 실패:", e.message);
       scoredNewJobs.push({ ...job, score: null, matchKeywords: [], gapKeywords: [], analysis: "" });
