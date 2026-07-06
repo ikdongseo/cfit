@@ -1,5 +1,34 @@
 [
   {
+    "id": "aHR0cHM6Ly9rci5saW5rZWRpbi5jb20vam9icy8l",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "대한민국 경력직 채용공고 29",
+    "company": "https://kr.linkedin.com › jobs › 경력직-jobs",
+    "url": "https://kr.linkedin.com/jobs/%EA%B2%BD%EB%A0%A5%EC%A7%81-jobs",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "오늘 눈에 띄는 대한민국 경력직 채용공고 29개. 인맥을 활용하여 기회의 문을 넓히세요. 새로운 경력직 채용공고가 매일 올라옵니다.",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 30,
+    "matchKeywords": [
+      "경력직",
+      "한국 근무"
+    ],
+    "gapKeywords": [
+      "직무 미명시",
+      "요구 역량 없음",
+      "경력 조건 없음",
+      "급여 정보 없음",
+      "고용형태 미상"
+    ],
+    "analysis": "채용공고가 LinkedIn 검색 결과 페이지로 구체적인 직무, 요구 역량, 경력 조건 등 핵심 정보가 전혀 명시되어 있지 않아 지원자의 경력기술서와 실질적인 매칭 분석이 불가능하다. 지원자는 DX/PI 컨설팅, AI 전략, 데이터 관리, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나, 공고 내용 부재로 인해 적합도 점수는 최소 수준으로만 산정되었다."
+  },
+  {
     "id": "aHR0cHM6Ly9jYXJlZXJzLmtha2FvLmNvbS9qb2Jz",
     "source": "google_search",
     "matchedKeyword": "site:careers.kakao.com 경력 채용",
@@ -91,6 +120,36 @@
     "analysis": "채용공고가 SK하이닉스 채용 허브 페이지로만 구성되어 있어 구체적인 직무 요건과 자격 조건을 확인할 수 없어 정밀한 매칭 분석이 불가능합니다. 지원자는 삼성전자 반도체 부문 및 대형 제조사 DX/PI 프로젝트 경험을 보유하고 있으나, SK하이닉스의 특정 직무 요건이 명시되지 않아 적합도를 정확히 산출하기 어렵습니다."
   },
   {
+    "id": "aHR0cDovL3d3dy5jYXJlZXIuY28ua3Iv",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "커리어 - 취업이 이뤄진다, 이직이 이뤄진다. www.career.co.kr",
+    "company": "http://www.career.co.kr",
+    "url": "http://www.career.co.kr/",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "[경력] Sales_국내 마케팅 전략 기획. D-25 경력 학력무관 · 기업 로고. 경기대학교. 경기대학교 2026 신규직원(정규직) 공개채용. D-4 경력무관 대학교(4년) 졸업 이상.",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 12,
+    "matchKeywords": [
+      "경력직",
+      "전략기획"
+    ],
+    "gapKeywords": [
+      "국내 마케팅",
+      "Sales",
+      "영업기획",
+      "마케팅 전략",
+      "학력 무관 공채",
+      "경기대학교 관련 직무"
+    ],
+    "analysis": "채용공고가 'Sales_국내 마케팅 전략 기획' 및 '경기대학교 신규직원 공채'로 구성되어 있어, 지원자의 DX/PI 컨설팅·감사·SCM 프로젝트 관리 경력과 직무 연관성이 거의 없다. 공고 자체의 정보가 매우 부족하고 지원자의 핵심 역량인 AI·DX 프로젝트 관리, 이해관계자 커뮤니케이션, 데이터 체계 구축 등과 매칭되는 요건이 공고에 명시되어 있지 않아 적합도가 매우 낮다."
+  },
+  {
     "id": "aHR0cHM6Ly9yZWNydWl0Lm5hdmVyY29ycC5jb20v",
     "source": "google_search",
     "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
@@ -150,5 +209,121 @@
       "신입/인턴 포지션 적합성"
     ],
     "analysis": "해당 공고는 SK하이닉스의 2026년 청년 인턴(Hy-Five 15기) 프로그램으로, 경력 14년 이상의 Manager/책임매니저급 지원자와는 직급 및 지원 자격 면에서 근본적으로 맞지 않습니다. 지원자의 DX·컨설팅·감사 역량은 우수하나, 본 공고는 청년 인턴을 대상으로 하므로 적합도가 매우 낮습니다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cuam9icGxhbmV0LmNvLmtyL2Nv",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "커리어 망치는 '물경력'이란 무엇인가?",
+    "company": "https://www.jobplanet.co.kr › contents › news-3477",
+    "url": "https://www.jobplanet.co.kr/contents/news-3477/%EC%BB%A4%EB%A6%AC%EC%96%B4-%EB%A7%9D%EC%B9%98%EB%8A%94-%EB%AC%BC%EA%B2%BD%EB%A0%A5-%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "[데이터J] 잡플래닛 리뷰로 본 '물경력'…당신도 해당 되나요? · ① 일의 강도가 낮거나 일이 너무 없다 · ② 똑같은 일만 되풀이… · ③ 팀장과 사원이 하는 ...",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 10,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 불명확",
+      "직무 요건 없음",
+      "고용형태 미상",
+      "경력 조건 미상"
+    ],
+    "analysis": "제공된 채용공고는 실제 채용 공고가 아닌 잡플래닛의 '물경력' 관련 뉴스 콘텐츠 URL로, 직무·자격요건·우대사항 등 비교 분석에 필요한 정보가 전혀 없습니다. 경력기술서는 DX/AI 컨설팅, 제조업 PI 프로젝트, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나, 유효한 채용공고가 없어 적합도 점수 산출이 불가능합니다."
+  },
+  {
+    "id": "aHR0cHM6Ly9uYW11Lndpa2kvdy8lRUElQjIlQkQl",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "경력",
+    "company": "https://namu.wiki › 경력",
+    "url": "https://namu.wiki/w/%EA%B2%BD%EB%A0%A5",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "경력의 사전상의 정의는 '겪어 지내 온 여러 가지 일'을 의미한다. 즉, 어떤 사람이 살면서 겪어온 일들을 말한다. 하지만 일상적으로 이러한 의미로 ...",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 직무 정보 없음",
+      "요구 역량 정보 없음",
+      "고용형태 정보 없음",
+      "급여 정보 없음",
+      "경력 조건 정보 없음"
+    ],
+    "analysis": "제공된 채용공고는 실제 채용 정보가 아닌 나무위키의 '경력' 단어 정의 페이지로, 직무 요건·자격 조건·우대사항 등 비교 분석에 필요한 정보가 전혀 포함되어 있지 않습니다. 유효한 채용공고를 다시 제공해 주시면 지원자의 DX 프로젝트 관리, 컨설팅, 이해관계자 커뮤니케이션 등 풍부한 경력과의 정밀한 매칭 분석이 가능합니다."
+  },
+  {
+    "id": "aHR0cDovL3d3dy5jYXJlZXIuY28ua3IvdG9vbHMv",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "경력 계산기",
+    "company": "http://www.career.co.kr › tools › Calc_Career",
+    "url": "http://www.career.co.kr/tools/Calc_Career.asp",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "커리어 경력 계산기로 회원님의 총 경력을 쉽게 산출하실 수 있습니다. 재직기간 입력. - 재직기간 설정은 오름차순으로만 가능합니다. - ...",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "제공된 채용공고는 실제 채용 정보가 아닌 경력 계산기 웹페이지로, 직무 요건 및 자격 조건이 전혀 포함되어 있지 않습니다. 유효한 채용공고가 없어 경력기술서와의 매칭 분석이 불가능합니다."
+  },
+  {
+    "id": "aHR0cHM6Ly9rby53aWtpcGVkaWEub3JnL3dpa2kv",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "경력 - 위키백과, 우리 모두의 백과사전",
+    "company": "https://ko.wikipedia.org › wiki › 경력",
+    "url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EB%A0%A5",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "경력(經歷)은 직업상으로 일정기간 해온 일이나 경험을 말한다. 커리어(career)라고도 한다. 경력보유자는 해당 분야에 경력이 있는 사람을 가리키며 특히 기술적인 전문가 ...",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "제공된 채용공고는 실제 채용 정보가 아닌 위키백과의 '경력' 단어 설명 페이지로, 직무 요건·자격 조건·우대사항 등 비교 분석에 필요한 정보가 전혀 포함되어 있지 않습니다. 유효한 채용공고 내용을 제공해 주시면 경력기술서와의 매칭 분석을 정확하게 수행할 수 있습니다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cuam9ia29yZWEuY28ua3IvVXNl",
+    "source": "google_search",
+    "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
+    "title": "3개월 경력 쓰는게좋을까? | 취업 Q&A",
+    "company": "https://www.jobkorea.co.kr › 취업 Q&A › 68939",
+    "url": "https://www.jobkorea.co.kr/User/Qstn/AnswerWrite?qstnNo=68939",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "자소서쓰는데 3개월 경력 쓰는게좋을까? 이거안쓰면공백기가1년2개월이라,,, 다들어떻게생각해?",
+    "fetchedAt": "2026-07-06T13:06:43.202Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 없음",
+      "직무 정보 없음",
+      "요구 역량 없음",
+      "지원 자격 없음"
+    ],
+    "analysis": "제공된 채용공고는 실제 채용 공고가 아니라 취업 Q&A 게시글로, 직무·자격요건·우대사항 등 비교 분석에 필요한 정보가 전혀 없습니다. 유효한 채용공고 URL 또는 공고 내용을 다시 제공해 주시면 정확한 적합도 분석이 가능합니다."
   }
 ]
