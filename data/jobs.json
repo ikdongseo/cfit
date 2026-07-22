@@ -60,6 +60,35 @@
     "analysis": "채용공고의 실제 내용이 JavaScript 비활성화로 인해 로드되지 않아 직무 요건, 필수 역량, 우대 조건 등 핵심 정보를 확인할 수 없었습니다. 경력기술서 자체는 DX/PI 프로젝트 관리, 이해관계자 커뮤니케이션, 데이터 체계 구축 등 IT·컨설팅 분야의 탄탄한 역량을 보유하고 있으나, 공고 내용 부재로 인해 적합도 점수 산정이 불가능하여 최소 기본값으로 반환합니다."
   },
   {
+    "id": "aHR0cHM6Ly9uZXdzLnNraHluaXguY29tL2VuL2Nh",
+    "source": "google_search",
+    "matchedKeyword": "site:skhynix.com 경력 채용",
+    "title": "Instagram – Page 14",
+    "company": "https://news.skhynix.com › category › media-library",
+    "url": "https://news.skhynix.com/en/category/media-library/instagram/page/14/",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "... 채용 전략 'Talent hy-way'를 공개하고, 미래 경쟁력 강화를 위한 인재 확보 체계를 본격화합니다. 기존 경력 중심 채용 구조에서 신입과 전임직까지 아우르는 수시 채용 ...",
+    "fetchedAt": "2026-07-22T07:59:27.032Z",
+    "score": 22,
+    "matchKeywords": [
+      "경력",
+      "채용"
+    ],
+    "gapKeywords": [
+      "SK하이닉스 직무 연관성",
+      "반도체 설계/공정 경험",
+      "채용공고 직무 명확성 부재",
+      "AI/DX 컨설팅 직접 연관성",
+      "지원 포지션 불명확"
+    ],
+    "analysis": "채용공고가 SK하이닉스의 채용 전략 홍보 미디어 게시물로 특정 직무나 요구 역량이 명시되어 있지 않아 지원자의 경력과 구체적으로 매칭하기 어렵다. 지원자는 DX/PI 프로젝트 관리, AI 컨설팅, 이해관계자 커뮤니케이션 등 강점을 보유하고 있으나, 공고 내용 자체가 특정 역할을 제시하지 않아 적합도 판단에 근본적인 한계가 있다."
+  },
+  {
     "id": "aHR0cHM6Ly9jYXJlZXJzLmtha2FvLmNvbS8=",
     "source": "google_search",
     "matchedKeyword": "site:careers.kakao.com 경력 채용",
