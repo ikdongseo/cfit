@@ -268,6 +268,30 @@
     "analysis": "해당 공고는 SK하이닉스의 2026년 청년 인턴(Hy-Five 15기) 프로그램으로, 경력 14년 이상의 Manager/책임매니저급 지원자와는 직급 및 지원 자격 면에서 근본적으로 맞지 않습니다. 지원자의 DX·컨설팅·감사 역량은 우수하나, 본 공고는 청년 인턴을 대상으로 하므로 적합도가 매우 낮습니다."
   },
   {
+    "id": "aHR0cHM6Ly9jYXJlZXJzLmtha2FvLmNvbS9ldGMv",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "개인정보처리방침",
+    "company": "https://careers.kakao.com › etc › privacyPolicy",
+    "url": "https://careers.kakao.com/etc/privacyPolicy",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "필수항목: 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호. 공고 지원 및 인재풀 등록 시. 필수항목: 경력사항(입사일, 퇴사일, 회사명, 담당업무, 직원유형) ...",
+    "fetchedAt": "2026-08-07T23:59:46.020Z",
+    "score": 10,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 없음",
+      "직무 정보 없음",
+      "요구 역량 없음"
+    ],
+    "analysis": "제공된 채용공고는 실제 채용 공고가 아닌 카카오 채용 사이트의 개인정보처리방침 페이지로, 직무 요건·자격 조건·우대사항 등 비교 분석에 필요한 정보가 전혀 포함되어 있지 않습니다. 정확한 적합도 분석을 위해 실제 채용 공고 내용(직무 설명, 자격 요건, 우대사항 등)을 제공해 주시기 바랍니다."
+  },
+  {
     "id": "aHR0cHM6Ly93d3cuam9icGxhbmV0LmNvLmtyL2Nv",
     "source": "google_search",
     "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
