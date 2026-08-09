@@ -1,5 +1,61 @@
 [
   {
+    "id": "aHR0cHM6Ly93d3cuam9ia29yZWEuY28ua3Iv",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "잡코리아 | 대한민국 대표 구인구직, 취업 정보 & 채용 플랫폼",
+    "company": "https://www.jobkorea.co.kr",
+    "url": "https://www.jobkorea.co.kr/",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "대기업 실시간 공채 소식부터 핫한 스타트업의 기업 리뷰, 연봉 정보 및 면접 후기까지 - 성공적인 커리어를 위한 모든것을 지금 '잡코리아'에서 확인하세요!",
+    "fetchedAt": "2026-08-09T23:58:50.906Z",
+    "score": 50,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 상세 정보 없음",
+      "직무 요건 불명확",
+      "고용형태 미기재",
+      "경력 조건 미기재",
+      "급여 미기재"
+    ],
+    "analysis": "채용공고가 잡코리아 플랫폼 소개 페이지로 연결되어 있어 실제 직무 요건, 자격 조건, 우대사항 등 구체적인 채용 정보가 전혀 확인되지 않는다. 경력기술서 자체는 DX/PI 프로젝트 관리, AI 전략 수립, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나 공고 내용 부재로 정확한 적합도 분석이 불가능하다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cuY2F0Y2guY28ua3IvTkNTL1Jl",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "경력 3~7년차 채용공고 868건",
+    "company": "https://www.catch.co.kr › 채용 › 전체 채용공고",
+    "url": "https://www.catch.co.kr/NCS/RecruitSearch?theme=102",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "이직해도 좋을 M레벨(3~7년차) 공고만 모았어요! 기업정보, 현직자리뷰, 연봉까지 캐치에서 한 번에 확인하고 지원하세요. 대기업/중견/중소 상위 10% 채용공고는 ...",
+    "fetchedAt": "2026-08-09T23:58:50.906Z",
+    "score": 30,
+    "matchKeywords": [
+      "경력 3~7년차",
+      "제조업 경험",
+      "프로젝트 관리"
+    ],
+    "gapKeywords": [
+      "구체적 직무 미명시",
+      "회사명 불명확",
+      "요구 기술스택 없음",
+      "급여 조건 없음",
+      "고용형태 미명시"
+    ],
+    "analysis": "채용공고가 특정 직무·회사·요구역량 없이 경력 3~7년차 대상 공고 목록을 안내하는 메타 페이지에 불과하여 경력기술서와 실질적인 매칭 분석이 불가능하다. 지원자의 DX/AI 컨설팅·프로젝트 관리 역량은 우수하나, 공고 내용이 구체적이지 않아 적합도 점수를 높게 산정할 근거가 없다."
+  },
+  {
     "id": "aHR0cHM6Ly9rci5saW5rZWRpbi5jb20vam9icy8l",
     "source": "google_search",
     "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
@@ -315,6 +371,52 @@
       "경력 조건 미상"
     ],
     "analysis": "제공된 채용공고는 실제 채용 공고가 아닌 잡플래닛의 '물경력' 관련 뉴스 콘텐츠 URL로, 직무·자격요건·우대사항 등 비교 분석에 필요한 정보가 전혀 없습니다. 경력기술서는 DX/AI 컨설팅, 제조업 PI 프로젝트, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나, 유효한 채용공고가 없어 적합도 점수 산출이 불가능합니다."
+  },
+  {
+    "id": "aHR0cHM6Ly9jYXJlZXIuc3cub3Iua3Iv",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "KOSA - 한국인공지능·소프트웨어산업협회",
+    "company": "https://career.sw.or.kr",
+    "url": "https://career.sw.or.kr/",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "이 페이지에 관한 정보가 없습니다.",
+    "fetchedAt": "2026-08-09T23:58:50.906Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "채용공고 내용이 '이 페이지에 관한 정보가 없습니다'로 실질적인 직무 요건 및 자격 조건이 전혀 제공되지 않아 경력기술서와의 비교 분석이 불가능합니다. 유효한 채용공고 내용을 제공해 주시면 정확한 매칭 분석을 수행할 수 있습니다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cuZ292LmtyL213L0FBMDIwSW5m",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "재직(퇴직·경력)증명 | 민원안내 및 신청",
+    "company": "https://www.gov.kr › ...",
+    "url": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=00000000008",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "이 민원은 공공기관에서 근무하였던 자 또는 근무하고 있는 자가 경력사항을 증명 받을 때 혹은 퇴직할 때 신청하는 민원사무입니다.(현재 온라인 신청은 중앙부처(퇴직자) ...",
+    "fetchedAt": "2026-08-09T23:58:50.906Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "채용공고 없음",
+      "직무 정보 없음",
+      "고용형태 미상",
+      "경력 조건 미상",
+      "급여 미상"
+    ],
+    "analysis": "제공된 채용공고는 실제 기업 채용공고가 아니라 정부24(gov.kr)의 재직·경력증명 민원 안내 페이지로, 지원 직무·자격요건·우대사항 등 비교 분석에 필요한 정보가 전혀 없습니다. 유효한 채용공고가 제공되지 않아 경력기술서와의 적합도 산출이 불가능합니다."
   },
   {
     "id": "aHR0cHM6Ly9uYW11Lndpa2kvdy8lRUElQjIlQkQl",
