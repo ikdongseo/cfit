@@ -234,6 +234,32 @@
     "analysis": "채용공고의 내용이 극히 제한적이고 구체적인 직무요건, 우대사항, 업무내용이 전혀 명시되지 않아 경력기술서와의 실질적인 매칭 분석이 불가능하다. 지원자는 AI·DX 프로젝트 관리, 컨설팅, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나, 공고의 정보 부족으로 인해 적합도를 정확히 산출할 수 없다."
   },
   {
+    "id": "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL21hdGgv",
+    "source": "google_search",
+    "matchedKeyword": "site:skhynix.com 경력 채용",
+    "title": "경력 및 교육 질문: 2026년 9월 24일 : r/math",
+    "company": "1주 전",
+    "url": "https://www.reddit.com/r/math/comments/1wp5le5/career_and_education_questions_september_24_2026/?tl=ko",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "이 정기 스레드는 수학 분야의 경력 및 교육에 관한 질문이나 조언을 위한 것입니다. 아래에 자유롭게 댓글을 달아주시고, 답변되지 않은 댓글이 있을 ...",
+    "fetchedAt": "2026-10-06T03:13:06.011Z",
+    "score": 12,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "수학 전문성",
+      "학술 연구",
+      "수학 교육",
+      "수학 경력",
+      "Reddit 커뮤니티 활동"
+    ],
+    "analysis": "해당 채용공고는 Reddit r/math 커뮤니티의 정기 스레드로 실제 기업 채용공고가 아니며, 수학 분야 경력 및 교육 관련 질문·조언을 위한 포럼 게시물에 불과하다. 지원자의 경력(DX 컨설팅, 제조업 PI, AI 전략)은 해당 스레드와 어떠한 직무적 연관성도 없어 사실상 매칭이 불가능하다."
+  },
+  {
     "id": "aHR0cHM6Ly9zaGFyaW5nLnNraHluaXguY29tL2h5",
     "source": "google_search",
     "matchedKeyword": "site:skhynix.com 경력 채용",
@@ -642,6 +668,32 @@
       "산림 현장 경험"
     ],
     "analysis": "이 채용공고는 산림기술경력증명서 발급 안내로, 실질적인 채용 공고가 아니며 산림 분야와 전혀 무관한 IT·DX·컨설팅 경력을 보유한 지원자와 매칭되는 요소가 거의 없다. 지원자의 핵심 역량인 AI·DX 프로젝트 관리, 제조업 컨설팅, ERP·CRM 고도화 등은 본 공고와 연관성이 전혀 없어 지원 적합성이 극히 낮다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cueW91dHViZS5jb20vcG9zdC9V",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "🪽 꿈날개X세바시 경력보유여성 재도약 토크콘서트 : 마음을 ...",
+    "company": "1주 전",
+    "url": "https://www.youtube.com/post/UgkxUAGvhpm0WLgjYc4iNOLr-CsZVQQ8C8QR",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "꿈날개X세바시 경력보유여성 재도약 토크콘서트 : 마음을 듣고, 내-일을 열다 ‍⚕️ 박정재 | 마음안 정신건강의학과의원 원장 집에 있는데 왜 더 ...",
+    "fetchedAt": "2026-10-06T03:13:05.085Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "AI 컨설팅",
+      "DX 프로젝트",
+      "제조업 경험",
+      "이해관계자 커뮤니케이션",
+      "데이터 관리"
+    ],
+    "analysis": "채용공고가 '경력보유여성 재도약 토크콘서트' 행사 안내로, 특정 직무나 요구 역량이 명시되지 않아 경력기술서와의 실질적인 매칭 분석이 불가능합니다. 채용공고 내용이 구체적인 직무기술서가 아닌 이벤트 홍보문이므로 적합도 점수를 산출할 수 없습니다."
   },
   {
     "id": "aHR0cHM6Ly93d3cuam9vbmdhbmcuY28ua3IvYXJ0",
