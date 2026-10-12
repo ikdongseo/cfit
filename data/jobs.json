@@ -1,5 +1,59 @@
 [
   {
+    "id": "aHR0cDovL3d3dy5yZWNydWl0Lm9yLmtyL2luZGV4",
+    "source": "google_search",
+    "matchedKeyword": "site:skhynix.com 경력 채용",
+    "title": "취업정보센터(채용공고) 바로가기",
+    "company": "http://www.recruit.or.kr › ...",
+    "url": "http://www.recruit.or.kr/index.asp?arg1=&arg2=kpei",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "",
+    "fetchedAt": "2026-10-12T02:35:56.807Z",
+    "score": 62,
+    "matchKeywords": [
+      "DX 프로젝트 관리",
+      "이해관계자 커뮤니케이션",
+      "AI 전략",
+      "컨설팅 경험",
+      "데이터 관리",
+      "제조업 도메인",
+      "C-Level 보고"
+    ],
+    "gapKeywords": [
+      "채용공고 상세 내용 없음",
+      "직무 요건 불명확",
+      "고용형태 미기재",
+      "급여 조건 미기재",
+      "필수 자격 요건 확인 불가"
+    ],
+    "analysis": "채용공고의 핵심 정보(직무 내용, 자격 요건, 고용형태, 급여 등)가 누락되어 있어 경력기술서와의 정밀한 매칭 분석이 불가능하다. 지원자는 AI·DX 컨설팅, 대기업 프로젝트 관리, 데이터 체계 구축 등 폭넓은 역량을 보유하고 있으나, 공고 내용이 불충분하여 적합도 점수는 잠정적으로 산출되었다."
+  },
+  {
+    "id": "aHR0cHM6Ly9sLmxldHNjYXJlZXIuY28ua3IvSEoz",
+    "source": "google_search",
+    "matchedKeyword": "site:skhynix.com 경력 채용",
+    "title": "https://l.letscareer.co.kr/HJ3K1",
+    "company": "https://l.letscareer.co.kr › ...",
+    "url": "https://l.letscareer.co.kr/HJ3K1",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "이 페이지에 관한 정보가 없습니다.",
+    "fetchedAt": "2026-10-12T02:35:56.807Z",
+    "score": 50,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "채용공고 URL만 제공되었고 실제 공고 내용이 '이 페이지에 관한 정보가 없습니다'로 확인 불가하여 정확한 비교 분석이 불가능합니다. 공고 원문 텍스트를 직접 입력해 주시면 경력기술서와 상세 매칭 분석이 가능합니다."
+  },
+  {
     "id": "aHR0cHM6Ly93d3cuam9ia29yZWEuY28ua3Iv",
     "source": "google_search",
     "matchedKeyword": "site:careers.kakao.com 경력 채용",
@@ -698,6 +752,26 @@
       "산림 현장 경험"
     ],
     "analysis": "이 채용공고는 산림기술경력증명서 발급 안내로, 실질적인 채용 공고가 아니며 산림 분야와 전혀 무관한 IT·DX·컨설팅 경력을 보유한 지원자와 매칭되는 요소가 거의 없다. 지원자의 핵심 역량인 AI·DX 프로젝트 관리, 제조업 컨설팅, ERP·CRM 고도화 등은 본 공고와 연관성이 전혀 없어 지원 적합성이 극히 낮다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cud29yay5nby5rci95YW5nanUv",
+    "source": "google_search",
+    "matchedKeyword": "site:skhynix.com 경력 채용",
+    "title": "https://www.work.go.kr/yangju/newsPlace/notice/not...",
+    "company": "https://www.work.go.kr › yangju › notice › noticeDetail",
+    "url": "https://www.work.go.kr/yangju/newsPlace/notice/noticeDetail.do?articleSeqno=129999&articleClSeqno=1000000000&currentPage=1&subNaviMenuCd=20200",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "",
+    "fetchedAt": "2026-10-12T02:35:56.807Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "채용공고 내용이 제공되지 않아 경력기술서와의 비교 분석이 불가능합니다. 유효한 채용공고 텍스트를 입력해 주시면 정확한 매칭 분석을 제공할 수 있습니다."
   },
   {
     "id": "aHR0cHM6Ly93d3cud29yay5nby5rci9naW1wby9j",
