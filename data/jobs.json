@@ -881,6 +881,26 @@
     "analysis": "이 채용공고는 산림기술경력증명서 발급 안내로, 실질적인 채용 공고가 아니며 산림 분야와 전혀 무관한 IT·DX·컨설팅 경력을 보유한 지원자와 매칭되는 요소가 거의 없다. 지원자의 핵심 역량인 AI·DX 프로젝트 관리, 제조업 컨설팅, ERP·CRM 고도화 등은 본 공고와 연관성이 전혀 없어 지원 적합성이 극히 낮다."
   },
   {
+    "id": "aHR0cHM6Ly93d3cud29yay5nby5rci9zZW9uZ25h",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "https://www.work.go.kr/seongnam/ctrIntro/ctrWork/c...",
+    "company": "https://www.work.go.kr › seongnam › ctrWorkDetail",
+    "url": "https://www.work.go.kr/seongnam/ctrIntro/ctrWork/ctrWorkDetail.do?detCode=1&menuCd=40220&subMenuCd=40201",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "",
+    "fetchedAt": "2026-10-22T01:42:16.304Z",
+    "score": 0,
+    "matchKeywords": [],
+    "gapKeywords": [],
+    "analysis": "채용공고 내용이 제공되지 않아 경력기술서와의 비교 분석이 불가능합니다. 유효한 채용공고 텍스트를 입력해 주시면 정확한 매칭 분석을 제공할 수 있습니다."
+  },
+  {
     "id": "aHR0cHM6Ly93d3cud29yay5nby5rci9zZWVrU2kv",
     "source": "google_search",
     "matchedKeyword": "site:recruit.navercorp.com 경력 채용",
