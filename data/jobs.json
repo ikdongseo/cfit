@@ -402,6 +402,37 @@
     "analysis": "채용공고의 내용이 극히 제한적이고 구체적인 직무요건, 우대사항, 업무내용이 전혀 명시되지 않아 경력기술서와의 실질적인 매칭 분석이 불가능하다. 지원자는 AI·DX 프로젝트 관리, 컨설팅, 이해관계자 커뮤니케이션 등 우수한 역량을 보유하고 있으나, 공고의 정보 부족으로 인해 적합도를 정확히 산출할 수 없다."
   },
   {
+    "id": "aHR0cHM6Ly93d3cuZ2IuZ28ua3IvTWFpbi9leGFt",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "2026년도 경상북도 지방공무원 경력경쟁임용시험 계획 공고 ...",
+    "company": "https://www.gb.go.kr › Main › exam_info › page",
+    "url": "https://www.gb.go.kr/Main/exam_info/page.do?mnu_uid=2917&BD_CODE=sihum_info&cmd=2&B_NUM=506842001&B_STEP=506842000",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "2026년도 경상북도 지방공무원 경력경쟁임용시험 계획 공고(변경) 상세내용 · 등록일2026-02-12 09:08:46 · 작성자 인재복지과 [ 강*구 ☎054-880-4583 ].",
+    "fetchedAt": "2026-10-26T01:30:48.750Z",
+    "score": 12,
+    "matchKeywords": [
+      "경력",
+      "한국"
+    ],
+    "gapKeywords": [
+      "지방공무원",
+      "행정직",
+      "공무원 시험 응시 자격",
+      "경력경쟁임용 요건",
+      "경상북도 관련 직무 경험",
+      "행정 업무 경험",
+      "공직 적합성"
+    ],
+    "analysis": "채용공고는 경상북도 지방공무원 경력경쟁임용시험으로, 공무원 직렬별 특정 자격 요건과 행정 경험을 요구하는 반면, 지원자는 대기업 및 컨설팅 분야의 DX·AI·SCM 프로젝트 관리 전문가로 공직 직무와의 연관성이 거의 없다. 공고 내용이 매우 단편적으로 제공되어 세부 직렬·자격 요건을 확인할 수 없으나, 지원자의 전반적인 경력 방향성(민간 제조·컨설팅·AI)이 지방공무원 임용 요건과 구조적으로 불일치하여 적합도가 매우 낮다."
+  },
+  {
     "id": "aHR0cHM6Ly93d3cua29pdGEub3Iua3IvY29udHMv",
     "source": "google_search",
     "matchedKeyword": "site:careers.kakao.com 경력 채용",
@@ -705,6 +736,33 @@
       "기아 감사"
     ],
     "analysis": "채용공고는 경력단절 여성을 대상으로 한 창업 관련 유튜브 영상 링크로, 실질적인 채용 공고가 아니며 지원자의 경력과 전혀 관련이 없다. 지원자는 대형 제조사 DX/PI 컨설팅 및 AI 전략 분야의 고급 전문가로, 본 공고와 직무·산업·고용형태 어느 측면에서도 매칭점이 존재하지 않는다."
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL3RlY2h0",
+    "source": "google_search",
+    "matchedKeyword": "site:careers.kakao.com 경력 채용",
+    "title": "경력 중반, 소품/아트 부서에 어떻게 들어가야 할까?",
+    "company": "댓글 3개 · 1개월 전",
+    "url": "https://www.reddit.com/r/techtheatre/comments/1wdoh7d/midcareer_how_do_i_get_into_a_propsart_dept/?tl=ko",
+    "location": "한국",
+    "jobType": "",
+    "industry": "",
+    "experience": "",
+    "education": "",
+    "salary": "",
+    "snippet": "업계에서 일한 지 거의 10년이 다 되어가는데, 대부분 사운드 엔지니어로 일했고 지난 3~5년 동안은 프로덕션 매니지먼트 ...",
+    "fetchedAt": "2026-10-26T01:30:48.750Z",
+    "score": 2,
+    "matchKeywords": [],
+    "gapKeywords": [
+      "소품/아트 부서 경험",
+      "사운드 엔지니어 경험",
+      "프로덕션 매니지먼트 경험",
+      "영상/미디어 업계 경력",
+      "세트 데코레이션",
+      "아트 디렉션"
+    ],
+    "analysis": "채용공고는 영상/미디어 업계의 소품·아트 부서 진입을 위한 사운드 엔지니어 및 프로덕션 매니지먼트 경력자를 대상으로 하는 반면, 지원자는 IT·DX 컨설팅 및 제조업 기반의 경영전략·감사 전문가로 두 직무 간 연관성이 사실상 전무하다. 공고 자체가 특정 직무 채용공고라기보다 커리어 조언을 구하는 커뮤니티 게시글로 보이며, 지원자의 경력과 접점이 없어 매칭 점수는 최하위 수준이다."
   },
   {
     "id": "aHR0cHM6Ly93d3cuY2FyZWVyLmdvLmtyL2ppbnJv",
